@@ -34,15 +34,4 @@ class ApiHelpers {
       return allData;
     }
   }
-
-  // Future<List<ApiModalClass>?> getMultipleResponse() async {
-  //   http.Response response = await http.get(Uri.parse(api));
-  //
-  //   if (response.statusCode == 200) {
-  //     List data = jsonDecode(response.body);
-  //     List<ApiModalClass> posts =
-  //         data.map((e) => ApiModalClass.fromMap(data: e)).toList();
-  //     return posts;
-  //   }
-  // }
 }
