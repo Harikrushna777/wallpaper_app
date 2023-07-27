@@ -11,7 +11,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("WallPaper App"),
+        title: const Text(
+          "WallPaper App",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Colors.blue,
         centerTitle: true,
       ),
       body: Consumer<ApiController>(

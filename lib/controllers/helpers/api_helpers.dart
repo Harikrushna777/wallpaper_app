@@ -30,7 +30,6 @@ class ApiHelpers {
     if (response.statusCode == 200) {
       Map data = jsonDecode(response.body);
       Posts allData = Posts.fromMap(data: data);
-
       return allData;
     }
   }

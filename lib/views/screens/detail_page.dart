@@ -12,7 +12,40 @@ class DetailPage extends StatelessWidget {
         title: const Text("Detail Page"),
         centerTitle: true,
       ),
-      body: Image.network(data['largeImageURL']),
+      body: Center(
+        child: SizedBox(
+          width: double.infinity,
+          height: double.infinity,
+          child: Stack(
+            alignment: Alignment.topCenter,
+            children: [
+              Image.network(
+                "https://i.pinimg.com/564x/f1/99/db/f199db479672d76c3c439901fcc9415a.jpg",
+                fit: BoxFit.fitHeight,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 640,
+                    width: 310,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(30),
+                      child: Image.network(
+                        data['largeImageURL'],
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           AsyncWallpaper.setWallpaper(
